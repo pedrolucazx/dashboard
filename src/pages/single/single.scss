@@ -1,0 +1,84 @@
+.single {
+  display: flex;
+  width: 100%;
+
+  .singleContainer {
+    flex: 6;
+
+    .top {
+      padding: 1.25rem;
+      display: flex;
+      gap: 1.25rem;
+
+      .left {
+        flex: 1;
+        -webkit-bot-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+        box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+        padding: 1.25rem;
+        position: relative;
+
+        .editButton {
+          position: absolute;
+          top: 0;
+          right: 0;
+          padding: 5px;
+          font-size: 0.75rem;
+          color: #2e97b7;
+          background-color: #2e97b718;
+          cursor: pointer;
+          border-radius: 0px 5px 0px 5px;
+        }
+
+        .item {
+          display: flex;
+          gap: 1.25rem;
+
+          .itemImage {
+            height: 6.25rem;
+            width: 6.25rem;
+            border-radius: 50%;
+            object-fit: cover;
+          }
+
+          .details {
+            .itemTitle {
+              margin-bottom: 1rem;
+              color: #555;
+            }
+
+            .detailsItem {
+              margin-bottom: 1rem;
+              font-size: 1rem;
+
+              .itemKey {
+                font-weight: bold;
+                color: #808080;
+                margin-right: 0.7rem;
+              }
+
+              .itemValue {
+                font-weight: 300;
+              }
+            }
+          }
+        }
+      }
+
+      .right {
+        flex: 2;
+      }
+    }
+    .bottom {
+      -webkit-bot-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+      box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+      padding: 1.25rem;
+      margin: 10px 20px;
+    }
+
+    .title {
+      font-size: 1rem;
+      color: #d3d3d3;
+      margin-bottom: 20px;
+    }
+  }
+}
