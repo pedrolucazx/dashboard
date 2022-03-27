@@ -11,12 +11,12 @@ import { data } from "./data";
 
 import "./chart.scss";
 
-interface Prop {
+interface IProp {
   aspect: number;
   title: string;
 }
 
-export function Chart({ aspect, title }: Prop) {
+export function Chart({ aspect, title }: IProp) {
   return (
     <div className="chart">
       <div className="title">{title}</div>

@@ -9,19 +9,19 @@ import KeyboardArrowUpOutlinedIcon from "@mui/icons-material/KeyboardArrowUpOutl
 
 import "./widgets.scss";
 
-interface Props {
+interface IProps {
   type: ReactNode;
 }
 
-interface Data {
+interface IData {
   title: string;
   isMoney: boolean;
   link: string;
   icon: ReactNode;
 }
 
-export function Widgets({ type }: Props) {
-  let data!: Data;
+export function Widgets({ type }: IProps) {
+  let data!: IData;
 
   //! temporary Mock
   const amount = 100;

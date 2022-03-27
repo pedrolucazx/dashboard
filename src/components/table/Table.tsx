@@ -16,13 +16,13 @@ export function TableList() {
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell className="tablaCell">ID de localização</TableCell>
-            <TableCell className="tablaCell">Produto</TableCell>
-            <TableCell className="tablaCell">Cliente</TableCell>
-            <TableCell className="tablaCell">Data</TableCell>
-            <TableCell className="tablaCell">Montante</TableCell>
-            <TableCell className="tablaCell">Método de pagamento</TableCell>
-            <TableCell className="tablaCell">Status</TableCell>
+            <TableCell className="tableCell">ID de localização</TableCell>
+            <TableCell className="tableCell">Produto</TableCell>
+            <TableCell className="tableCell">Cliente</TableCell>
+            <TableCell className="tableCell">Data</TableCell>
+            <TableCell className="tableCell">Montante</TableCell>
+            <TableCell className="tableCell">Método de pagamento</TableCell>
+            <TableCell className="tableCell">Status</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -31,18 +31,18 @@ export function TableList() {
               key={row.id}
               sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
             >
-              <TableCell className="tablaCell">{row.id}</TableCell>
-              <TableCell className="tablaCell">
+              <TableCell className="tableCell">{row.id}</TableCell>
+              <TableCell className="tableCell">
                 <div className="cellWrapper">
                   <img src={row.img} alt="" className="image" />
                   {row.product}
                 </div>
               </TableCell>
-              <TableCell className="tablaCell">{row.customer}</TableCell>
-              <TableCell className="tablaCell">{row.date}</TableCell>
-              <TableCell className="tablaCell">{row.amount}</TableCell>
-              <TableCell className="tablaCell">{row.method}</TableCell>
-              <TableCell className="tablaCell">
+              <TableCell className="tableCell">{row.customer}</TableCell>
+              <TableCell className="tableCell">{row.date}</TableCell>
+              <TableCell className="tableCell">{row.amount}</TableCell>
+              <TableCell className="tableCell">{row.method}</TableCell>
+              <TableCell className="tableCell">
                 <span className={`status ${row.status}`}>{row.status}</span>
               </TableCell>
             </TableRow>

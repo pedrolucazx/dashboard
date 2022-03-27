@@ -1,4 +1,6 @@
 import { GridColDef, GridValueGetterParams } from "@mui/x-data-grid";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export const userColumns: GridColDef[] = [
   { field: "id", headerName: "ID", width: 70 },
@@ -34,19 +36,6 @@ export const userColumns: GridColDef[] = [
       return (
         <div className={`cellWithStatus ${params.row.status}`}>
           {params.row.status}
-        </div>
-      );
-    },
-  },
-  {
-    field: "action",
-    headerName: "Action",
-    width: 200,
-    renderCell: () => {
-      return (
-        <div className="cellAction">
-          <div className="viewButton">View</div>
-          <div className="deleteButton">Delete</div>
         </div>
       );
     },

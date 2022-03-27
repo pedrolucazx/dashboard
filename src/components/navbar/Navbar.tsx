@@ -1,3 +1,6 @@
+import { useContext } from "react";
+import { DarkModeContext } from "../../context/darkModeContext";
+
 import { Avatar, Badge } from "@mui/material";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import LanguageOutlinedIcon from "@mui/icons-material/LanguageOutlined";
@@ -10,6 +13,8 @@ import ListOutlinedIcon from "@mui/icons-material/ListOutlined";
 import "./navbar.scss";
 
 export function Navbar() {
+  const { dispatch } = useContext(DarkModeContext);
+
   return (
     <nav className="navbar">
       <div className="wrapper">
@@ -23,7 +28,10 @@ export function Navbar() {
             Português
           </div>
           <div className="item">
-            <DarkModeOutlinedIcon className="icon" />
+            <DarkModeOutlinedIcon
+              className="icon"
+              onClick={() => dispatch({ type: "TOGGLE" })}
+            />
           </div>
           <div className="item">
             <FullscreenExitOutlinedIcon className="icon" />
